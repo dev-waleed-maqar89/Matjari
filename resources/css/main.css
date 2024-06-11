@@ -1,0 +1,104 @@
+.products-index-container,
+.products-category-products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    gap: 20px 10px;
+    padding: 10%;
+}
+
+.products-index-single-product-card *:not(del) {
+    text-decoration: none;
+}
+
+.products-index-single-product-image {
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 300px;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.single-product-details-container {
+    display: grid;
+    padding: 25px;
+    grid-template-areas: "maincolor about"
+        "sizes about"
+        "options about";
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 10px;
+    background-color: #65f06555;
+}
+
+.single-product-main-color-container {
+    grid-area: maincolor;
+}
+
+.single-product-main-color-images-container {
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 125px);
+    grid-template-rows: repeat(auto-fill, 125px);
+    gap: 10px 15px;
+}
+
+.single-product-main-color-images-container img {
+    width: 100%;
+    max-height: 125px;
+    min-height: 125px;
+}
+
+.single-product-sizes-container {
+    grid-area: sizes;
+}
+
+.single-product-options-container {
+    grid-area: options;
+}
+
+.single-product-single-option {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 10px 15px;
+}
+
+.single-product-single-option:not(:last-child)::after {
+    content: "";
+    display: block;
+    height: 0;
+    border-bottom: 2px solid #444;
+}
+
+.single-product-description-container {
+    grid-area: about;
+    padding: 10px;
+    border-left: solid 3px #4448;
+}
+
+.single-cart-products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(auto-fit, 400px);
+    grid-gap: 10px;
+}
+
+.single-cart-product-img {
+    height: 200px;
+    width: 200px;
+}
+
+.single-cart-single-product * {
+    text-decoration: none;
+}
+
+.single-cart-state {
+    background-color: rgba(40, 200, 40, .2);
+    display: inline-block;
+    height: 40px;
+    width: 100px;
+    font-weight: 900;
+    line-height: 40px;
+}
+
+.single-cart-state.active {
+    background-color: rgba(40, 200, 40, 1);
+}

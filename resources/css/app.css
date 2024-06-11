@@ -1,0 +1,83 @@
+@import "bootstrap";
+
+body {
+    background-color: #afa4
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+.navbar-container {
+    background-color: rgba(80, 255, 80, .8);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    width: 100%;
+}
+
+.main-navbar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 8%);
+    grid-template-areas: ". . . . . . . . . . .  basket";
+}
+
+.navbar-link,
+.navbar-link:hover {
+    all: unset;
+    font-weight: 900;
+}
+
+.navbar-link:hover {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.basket-icon {
+    grid-area: basket;
+}
+
+.dashboard-links {
+    width: 50%;
+}
+
+.menu-line {
+    height: 5px;
+    background-color: rgba(80, 155, 80, .8);
+    margin: 2px;
+}
+
+aside {
+    display: none;
+    position: absolute;
+    margin-left: 7%;
+    margin-top: -2%;
+    width: 15%;
+    z-index: 999;
+}
+
+.admin-navbar {
+    list-style-type: none;
+    background-color: rgba(120, 200, 120, .8);
+    padding: 5% 10%;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, 40px);
+}
+
+.admin-navbar>li {
+    padding: 5%;
+}
+
+.form-container {
+    margin: 40px auto;
+    width: 400px;
+    padding: 20px;
+    background-color: rgba(80, 200, 80, .4);
+    border: #6a64 solid 8px;
+}
+
+form>div {
+    margin-bottom: 5px;
+}
